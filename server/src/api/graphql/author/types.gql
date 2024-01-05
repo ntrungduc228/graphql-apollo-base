@@ -3,3 +3,9 @@ type Author {
  	fullName: String!
 	email: String!
 }
+
+
+input AuthorInput {
+	fullName: String!
+	email: String!
+}

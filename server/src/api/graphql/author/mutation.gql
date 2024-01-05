@@ -1,0 +1,3 @@
+type Mutation {
+	addAuthor(name: String!, email: String!): Author
+}
