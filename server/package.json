@@ -15,16 +15,26 @@
 	},
 	"scripts": {
 		"start": "tsc && node ./dist/index.js",
-		"dev": "nodemon"
+		"dev": "nodemon",
+		"db:migrate": "knex migrate:latest --env master",
+		"db:rollback": "knex migrate:rollback --env master",
+		"migrate:make": "knex migrate:make --env master",
+		"migrate:up": "knex migrate:up --env master",
+		"migrate:down": "knex migrate:down --env master",
+		"seed:make": "knex seed:make --env master",
+		"seed:run": "knex seed:run --env master"
 	},
 	"author": "",
 	"dependencies": {
 		"@apollo/server": "^4.9.5",
 		"@graphql-tools/load-files": "^7.0.0",
 		"@graphql-tools/merge": "^9.0.1",
+		"dotenv": "^16.3.1",
 		"express": "^4.18.2",
 		"graphql": "^16.8.1",
-		"helmet": "^7.1.0"
+		"helmet": "^7.1.0",
+		"knex": "^3.1.0",
+		"mysql": "^2.18.1"
 	},
 	"devDependencies": {
 		"@types/express": "^4.17.21",
